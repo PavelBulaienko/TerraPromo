@@ -8,7 +8,7 @@
   </head>
 
   <body>
-    <div class="container">
+    <div class="mainContainer">
       <header class="header">
         <nav class="navigation">
           <div class="mainLogo">
@@ -21,25 +21,114 @@
               <img class="logo-icon" src="./images/Logo_main.jpg" alt="logo" />
             </a>
           </div>
-          <div class="menuList">
-            <button type="button" class="btnMenu">
-              <svg class="burgerMenuImg">
-                <use href="./images/sprite.svg#icon-menu"></use>
-              </svg>
-              <svg class="menuCloseIcon isHidden">
-                <use href="./images/sprite.svg#icon-cancel"></use>
-              </svg>
-            </button>
+
+          <button
+            type="button"
+            class="btn btnMenu"
+            data-bs-toggle="modal"
+            data-bs-target="#exampleModal"
+          >
+            <svg class="burgerMenuImg">
+              <use href="./images/sprite.svg#icon-menu"></use>
+            </svg>
+          </button>
+
+          <div
+            class="modal fade"
+            id="exampleModal"
+            tabindex="-1"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <a href="./index.html">
+                    <img
+                      class="logo-icon"
+                      src="./images/Logo_main.jpg"
+                      alt="logo"
+                    />
+                  </a>
+                  <button
+                    type="button"
+                    data-bs-dismiss="modal"
+                    class="closeBtnModal"
+                    aria-label="Close"
+                  >
+                    <svg class="menuCloseIcon">
+                      <use href="./images/sprite.svg#icon-cancel"></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <ul class="modalMenuList">
+                    <li class="modalMenuListItem">
+                      <a href="#">о предложении</a>
+                    </li>
+                    <li class="modalMenuListItem">
+                      <a href="#">преимущества работы</a>
+                    </li>
+                    <li class="modalMenuListItem">
+                      <a href="#">о компании</a>
+                    </li>
+                    <li class="modalMenuListItem"><a href="#">кейсы</a></li>
+                  </ul>
+                  <address class="contacts">
+                    <a href="tel:+380671111111" class="tel"
+                      >+380 (67) 111 11 11</a
+                    >
+                    <ul class="contactsList">
+                      <li class="contactsListItem">
+                        <a href="https://www.viber.com/ru/">
+                          <svg class="viberIcon">
+                            <use href="./images/sprite.svg#icon-viber"></use>
+                          </svg>
+                        </a>
+                      </li>
+                      <li class="contactsListItem">
+                        <a href="https://www.whatsapp.com/?lang=ru">
+                          <svg class="whatsappIcon">
+                            <use href="./images/sprite.svg#icon-whatsapp"></use>
+                          </svg>
+                        </a>
+                      </li>
+                      <li class="contactsListItem">
+                        <a href="https://web.telegram.org/#/login">
+                          <svg class="telegramIcon">
+                            <use href="./images/sprite.svg#icon-telegram"></use>
+                          </svg>
+                        </a>
+                      </li>
+                    </ul>
+                    <a href="mailto:email@site.com" class="email"
+                      >email@site.com</a
+                    >
+                  </address>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="modal isHidden">
-            <ul class="modalMenuList">
-              <li class="modalMenuListItem"><a href="#">о предложении</a></li>
-              <li class="modalMenuListItem">
-                <a href="#">преимущества работы</a>
-              </li>
-              <li class="modalMenuListItem"><a href="#">о компании</a></li>
-              <li class="modalMenuListItem"><a href="#">кейсы</a></li>
-            </ul>
+
+          <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid">
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">О ПРЕДЛОЖЕНИИ</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">ПРЕИМУЩЕСТВА РАБОТЫ</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">О КОМПАНИИ</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">КЕЙСЫ</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
             <address class="contacts">
               <a href="tel:+380671111111" class="tel">+380 (67) 111 11 11</a>
               <ul class="contactsList">
@@ -67,7 +156,7 @@
               </ul>
               <a href="mailto:email@site.com" class="email">email@site.com</a>
             </address>
-          </div>
+          </nav>
         </nav>
       </header>
 

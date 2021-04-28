@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Hayat Estate</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <header class="header">
+        <nav class="navigation">
+          <div class="mainLogo">
+            <a href="./index.html">
+              <!-- 
+                ФАЙЛ .svg ПЛОХО ЭКСПОРТИРУЕТСЯ В СПРАЙТ
+                <svg class="logo-icon">
+                <use href="./images/sprite.svg#icon-logoMain"></use>
+              </svg> -->
+              <img class="logo-icon" src="./images/Logo_main.jpg" alt="logo" />
+            </a>
+          </div>
+          <div class="menuList">
+            <button type="button" class="btnMenu">
+              <svg class="burgerMenuImg">
+                <use href="./images/sprite.svg#icon-menu"></use>
+              </svg>
+              <svg class="menuCloseIcon isHidden">
+                <use href="./images/sprite.svg#icon-cancel"></use>
+              </svg>
+            </button>
+          </div>
+          <div class="modal isHidden">
+            <ul class="modalMenuList">
+              <li class="modalMenuListItem"><a href="#">о предложении</a></li>
+              <li class="modalMenuListItem">
+                <a href="#">преимущества работы</a>
+              </li>
+              <li class="modalMenuListItem"><a href="#">о компании</a></li>
+              <li class="modalMenuListItem"><a href="#">кейсы</a></li>
+            </ul>
+            <address class="contacts">
+              <a href="tel:+380671111111" class="tel">+380 (67) 111 11 11</a>
+              <ul class="contactsList">
+                <li class="contactsListItem">
+                  <a href="https://www.viber.com/ru/">
+                    <svg class="viberIcon">
+                      <use href="./images/sprite.svg#icon-viber"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="contactsListItem">
+                  <a href="https://www.whatsapp.com/?lang=ru">
+                    <svg class="whatsappIcon">
+                      <use href="./images/sprite.svg#icon-whatsapp"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="contactsListItem">
+                  <a href="https://web.telegram.org/#/login">
+                    <svg class="telegramIcon">
+                      <use href="./images/sprite.svg#icon-telegram"></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+              <a href="mailto:email@site.com" class="email">email@site.com</a>
+            </address>
+          </div>
+        </nav>
+      </header>
+
+      <main class="banner">
+        <p class="banner__Text">
+          Комплексное сопровождение процесса покупки недвижимости за границей
+          для Ваших клиентов
+        </p>
+        <button type="button" class="aboutSuggestionBtn">о предложении</button>
+      </main>
+    </div>
+  </body>
+</html>

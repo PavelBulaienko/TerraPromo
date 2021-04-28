@@ -1,0 +1,369 @@
+@font-face {
+  font-family: 'TT Norms Regular';
+  src: url('./fonts/TTNorms-Regular.eot');
+  src: url('./fonts/TTNorms-Regular.eot?#iefix') format('embedded-opentype'),
+    url('./fonts/TTNorms-Regular.woff') format('woff'),
+    url('./fonts/TTNorms-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'TT Norms ExtraBold';
+  src: url('./fonts/TTNorms-ExtraBold.eot');
+  src: url('./fonts/TTNorms-ExtraBold.eot?#iefix') format('embedded-opentype'),
+    url('./fonts/TTNorms-ExtraBold.woff') format('woff'),
+    url('./fonts/TTNorms-ExtraBold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'TT Norms Medium';
+  src: url('./fonts/TTNorms-Medium.eot');
+  src: url('./fonts/TTNorms-Medium.eot?#iefix') format('embedded-opentype'),
+    url('./fonts/TTNorms-Medium.woff') format('woff'),
+    url('./fonts/TTNorms-Medium.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0 auto;
+  font-family: 'TT Norms Regular';
+}
+.isHidden {
+  display: none;
+  @media screen and (min-width: 1440px) {
+    display: block;
+  }
+}
+.container {
+  position: relative;
+  width: 376px;
+  margin: 0 auto;
+  @media screen and (min-width: 1440px) {
+    width: 1440px;
+
+    background-image: url('./images/bg1440.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  @media screen and (min-width: 1920px) {
+    width: 1920px;
+    background-image: url('./images/bg1920.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+.navigation {
+  padding-top: 10px;
+  margin-right: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  @media screen and (min-width: 1440px) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin: 0;
+  }
+}
+.mainLogo {
+  @media screen and (min-width: 1440px) {
+    margin-right: 26px;
+    margin-left: 32px;
+  }
+  @media screen and (min-width: 1920px) {
+    margin-left: 272px;
+  }
+}
+.logo-icon {
+  width: 120px;
+  @media screen and (min-width: 1440px) {
+    width: 150px;
+  }
+}
+
+.btnMenu {
+  background-color: white;
+  border: none;
+  max-height: 40px;
+  @media screen and (min-width: 1440px) {
+    display: none;
+    background-color: transparent;
+  }
+}
+.burgerMenuImg {
+  width: 40px;
+  max-height: 40px;
+}
+.menuCloseIcon {
+  width: 40px;
+  max-height: 40px;
+}
+.modal {
+  position: absolute;
+  top: 100px;
+  left: 50%;
+  width: 100%;
+  transform: translateX(-50%);
+  background-color: white;
+  padding-top: 20px;
+  @media screen and (min-width: 1440px) {
+    display: flex;
+    background-color: transparent;
+    position: static;
+    transform: translateX(0);
+  }
+  @media screen and (min-width: 1920px) {
+    justify-content: space-between;
+    margin-right: 250px;
+  }
+}
+.modalMenuList {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 0;
+  margin: 0 0 48px;
+  color: rgba(62, 75, 100, 1);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 21px;
+  letter-spacing: 0.05em;
+  &Item > a {
+    text-decoration: none;
+  }
+  &Item > a:hover,
+  &Item > a:focus {
+    color: rgba(221, 176, 78, 1);
+    text-decoration: underline;
+  }
+  &Item:not(:last-child) {
+    margin-bottom: 18px;
+  }
+  @media screen and (min-width: 1440px) {
+    flex-direction: row;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+    font-family: 'TT Norms Medium';
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 17px;
+    letter-spacing: 0.05em;
+    text-align: right;
+    &Item:last-child {
+      margin-right: 140px;
+    }
+
+    &Item:not(:last-child) {
+      margin-right: 35px;
+      margin-bottom: 0;
+    }
+  }
+}
+.tel {
+  font-family: 'TT Norms ExtraBold';
+  text-decoration: none;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+  letter-spacing: 0.05em;
+
+  color: #ddb04e;
+  @media screen and (min-width: 1440px) {
+    margin-right: 48px;
+
+    font-family: 'TT Norms ExtraBold';
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 21px;
+    letter-spacing: 0.05em;
+    text-align: right;
+  }
+}
+.email {
+  text-decoration: none;
+  font-style: normal;
+  font-family: 'TT Norms ExtraBold';
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+  letter-spacing: 0.05em;
+
+  color: #ddb04e;
+  margin-bottom: 55px;
+  @media screen and (min-width: 1440px) {
+    margin-bottom: 0;
+    font-family: 'TT Norms Regular';
+    transform: translate(-285px, 25px);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: 0.05em;
+    text-align: right;
+  }
+}
+.contacts {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  @media screen and (min-width: 1440px) {
+    font-family: 'TT Norms ExtraBold';
+    display: flex;
+    flex-direction: row;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 21px;
+    letter-spacing: 0.05em;
+    text-align: right;
+  }
+  &List {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 18px 0;
+    &Item:not(:last-child) {
+      margin-right: 15px;
+    }
+    @media screen and (min-width: 1440px) {
+      margin: 0;
+      &Item:not(:last-child) {
+        margin-right: 8px;
+      }
+    }
+  }
+}
+.viberIcon {
+  fill: #8e24aa;
+  width: 29px;
+  height: 29px;
+  @media screen and (min-width: 1440px) {
+    width: 20px;
+    height: 20px;
+    fill: white;
+  }
+}
+.whatsappIcon {
+  width: 29px;
+  height: 29px;
+  @media screen and (min-width: 1440px) {
+    width: 20px;
+    height: 20px;
+  }
+}
+.telegramIcon {
+  width: 29px;
+  height: 29px;
+  @media screen and (min-width: 1440px) {
+    width: 20px;
+    height: 20px;
+  }
+}
+.header {
+  margin-bottom: 30px;
+
+  @media screen and (min-width: 1440px) {
+    margin-bottom: 0;
+  }
+}
+.banner {
+  margin-bottom: 50px;
+  background-image: url('./images/bg376.jpg');
+  min-height: 620px;
+  &__Img {
+    position: relative;
+    top: -65px;
+    left: 0;
+  }
+  &__Text {
+    position: absolute;
+    top: 450px;
+    left: 10px;
+    margin-left: 12px;
+    font-family: 'TT Norms ExtraBold';
+    color: white;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 33px;
+    letter-spacing: 0.05em;
+    text-align: left;
+    @media screen and (min-width: 1440px) {
+      margin: 90px 0 0 150px;
+      position: static;
+      width: 440px;
+      max-height: 400px;
+      font-family: 'TT Norms ExtraBold';
+      color: #3e4b64;
+      font-size: 40px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 47px;
+      letter-spacing: 0.05em;
+      text-align: left;
+    }
+    @media screen and (min-width: 1920px) {
+      margin-left: 400px;
+    }
+  }
+  @media screen and (min-width: 1440px) {
+    display: flex;
+    background-image: none;
+    margin-bottom: 0;
+  }
+}
+.darkBg {
+  background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url('./images/bg376.jpg');
+}
+.aboutSuggestionBtn {
+  position: absolute;
+  bottom: -25px;
+  left: -5px;
+  padding: 19px 72px;
+  background-color: #ddb04e;
+  font-family: 'TT Norms ExtraBold';
+  color: #ffffff;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 22px;
+  letter-spacing: 0.05em;
+  text-align: center;
+  text-transform: uppercase;
+  border: none;
+  margin-left: 20px;
+  @media screen and (min-width: 1440px) {
+    position: static;
+    max-height: 55px;
+    margin-left: 400px;
+    margin-top: 330px;
+  }
+}
